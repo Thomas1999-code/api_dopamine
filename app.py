@@ -23,12 +23,17 @@ app.register_blueprint(utenti_bp)
 app.register_blueprint(recensioni_bp)
 app.register_blueprint(preferiti_bp)
 
+@app.route("/")
+def home():
+    return {"message": "API_DOPAMINE online"}
+
 @app.route("/health", methods=['GET'])
 def connection():
     try:
         return jsonify({"message" : "Connected"}), 200
     except Exception:
         return jsonify({"error" : "Internal server error"}), 500
+    
     
 # @app.errorhandler(400)
 # def handle_bad_request(error):
