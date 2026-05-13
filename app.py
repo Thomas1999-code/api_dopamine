@@ -8,7 +8,7 @@ from controllers.recensioni_controller import recensioni_bp
 
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 app = Flask(__name__)
 
@@ -51,4 +51,5 @@ def connection():
 #     return make_response(jsonify({'error': message}), 500)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
