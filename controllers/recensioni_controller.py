@@ -116,7 +116,7 @@ def update_review_patch(id_recensione):
             "commento":"descrizione_recensione", 
         }
 
-        for key_filed, value_filed in required_fields.item():
+        for key_filed, value_filed in required_fields.items():
             if key_filed in data:
                 setattr(review,value_filed,data[key_filed])
 

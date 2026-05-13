@@ -320,7 +320,7 @@ def update_event_patch(id_evento):
             "servizi":"servizi_evento"
         }
 
-        for key_filed, value_filed in required_fields.item():
+        for key_filed, value_filed in required_fields.items():
             if key_filed in data:
                 if key_filed == "data":
                     setattr(

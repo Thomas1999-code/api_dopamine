@@ -157,7 +157,7 @@ def update_user_patch(id_utente:int):
             "password" : "password_utente"
         }
 
-        for key_filed, value_filed in required_fileds.item():
+        for key_filed, value_filed in required_fileds.items():
             if key_filed in data:
                 if key_filed == 'data':
                     setattr(

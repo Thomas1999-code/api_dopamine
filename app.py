@@ -34,7 +34,7 @@ def connection():
     except Exception:
         return jsonify({"error" : "Internal server error"}), 500
     
-    
+print("DB URL:", os.getenv("DATABASE_URL"))  
 # @app.errorhandler(400)
 # def handle_bad_request(error):
 #     message = getattr(error, 'description', 'Bad request')

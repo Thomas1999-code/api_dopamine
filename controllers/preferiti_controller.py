@@ -120,7 +120,7 @@ def create_favorite():
 #             "id_evento":"id_evento_recensione", 
 #         }
 
-#         for key_filed, value_filed in required_fields.item():
+#         for key_filed, value_filed in required_fields.items():
 #             if key_filed in data:
 #                 setattr(favorite,value_filed,data[key_filed])
 
