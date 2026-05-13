@@ -23,9 +23,9 @@ app.register_blueprint(utenti_bp)
 app.register_blueprint(recensioni_bp)
 app.register_blueprint(preferiti_bp)
 
-@app.route("/")
-def home():
-    return {"message": "API_DOPAMINE online"}
+@app.route("/test")
+def test():
+    return {"ok": True}
 
 @app.route("/health", methods=['GET'])
 def connection():
