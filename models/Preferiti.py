@@ -7,6 +7,7 @@ class Preferito(db.Model):
     id_evento = db.Column(db.Integer, db.ForeignKey("eventi.id_evento"), primary_key=True)
 
     utente = db.relationship("Utente", backref="preferiti")
+    evento = db.relationship("Evento", backref="preferiti")
 
     def serialize(self):
         return {

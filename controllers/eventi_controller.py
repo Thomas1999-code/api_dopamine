@@ -162,7 +162,7 @@ def get_event_by_dateTime():
         print("Error", e)
         return jsonify({"error" : "Internal server error"}), 500
     
-#Ottengo tutti gli evetnti in ordine per meglio votati
+#Ottengo tutti gli eventi in ordine per meglio votati
 @eventi_bp.route("/api/events/rate", methods=['GET'])
 def get_events_by_rate():
     try:
