@@ -53,7 +53,7 @@ def get_user_by_id(id_utente:int):
 
 #Ottegno l'utente in base al suo nome       
 @utenti_bp.route("/api/users/<string:nome_utente>", methods=['GET'])
-def get_user_by_id(nome_utente:str):
+def get_user_by_name(nome_utente:str):
     try:
         users = Utente.query.filter(nome_utente).all()
 
