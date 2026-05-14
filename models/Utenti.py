@@ -33,5 +33,6 @@ class Utente(db.Model):
             "descrizione": self.descrizione_utente,
             "data": self.data_nascita_utente,
             "fotoProfio": self.foto_profilo_utente,
-            "email":self.email_utente
+            "email":self.email_utente,
+            "password":self.password_utente
         }

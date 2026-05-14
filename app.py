@@ -5,6 +5,8 @@ from controllers.eventi_controller import eventi_bp
 from controllers.utenti_controller import utenti_bp
 from controllers.preferiti_controller import preferiti_bp
 from controllers.recensioni_controller import recensioni_bp
+from controllers.cupon_controller import cupon_bp
+from controllers.scores_controller import score_bp
 
 #dotenv serve per il funzionemnto di subabase ma solo in locale
 #from dotenv import load_dotenv
@@ -27,6 +29,8 @@ app.register_blueprint(eventi_bp)
 app.register_blueprint(utenti_bp)
 app.register_blueprint(recensioni_bp)
 app.register_blueprint(preferiti_bp)
+app.register_blueprint(score_bp)
+app.register_blueprint(cupon_bp)
 
 @app.route("/health", methods=['GET'])
 def connection():
